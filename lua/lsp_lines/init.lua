@@ -35,8 +35,6 @@ M.setup = function(opts)
       local diagnostics = {}
       for _, diagnostic in pairs(_diagnostics) do
         if vim.tbl_contains(lsp_lines_opts.severity, diagnostic.severity) then
-          vim.pretty_print(lsp_lines_opts.severity)
-          vim.pretty_print(diagnostic)
           table.insert(diagnostics, diagnostic)
         end
       end
